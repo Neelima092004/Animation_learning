@@ -1,34 +1,41 @@
-%YAML 1.1
-%TAG !u! tag:unity3d.com,2011:
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcf7219bab7fe46a1ad266029b2fee19, type: 3}
-  m_Name: Readme
-  m_EditorClassIdentifier: 
-  icon: {fileID: 2800000, guid: 727a75301c3d24613a3ebcec4a24c2c8, type: 3}
-  title: URP Empty Template
-  sections:
-  - heading: Welcome to the Universal Render Pipeline
-    text: This template includes the settings and assets you need to start creating with the Universal Render Pipeline.
-    linkText: 
-    url:
-  - heading: URP Documentation
-    text:
-    linkText: Read more about URP
-    url: https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@latest
-  - heading: Forums
-    text:
-    linkText: Get answers and support
-    url: https://forum.unity.com/forums/universal-render-pipeline.383/
-  - heading: Report bugs
-    text:
-    linkText: Submit a report
-    url: https://unity3d.com/unity/qa/bug-reporting
-  loadedLayout: 1
+Unity Animation State Controller
+Overview
+This Unity project demonstrates the implementation of an Animation State Controller using the Unity Animator component and C# scripting. It handles transitions between idle, walking, and running states based on player input, providing a smooth and responsive animation experience.
+
+Features
+Dynamic Animation Transitions:
+Automatically transitions between idle, walking, and running states.
+User Input Handling:
+Responds to W and Left Shift key presses to trigger appropriate animations.
+Animator Hashing:
+Uses Animator.StringToHash() for optimized state management.
+How It Works
+Animation Setup:
+
+The script interacts with an Animator component attached to the GameObject.
+Animator parameters IsWalking and IsRunning control state transitions.
+Player Input:
+
+W Key: Triggers the walking animation.
+W + Left Shift: Triggers the running animation.
+Releasing keys transitions back to the idle state.
+Code Highlights:
+
+Hashing animation parameters with Animator.StringToHash() for better performance.
+Logic for walking and running animations is handled in the Update() method.
+Controls
+W Key: Start walking.
+W + Left Shift: Start running.
+Release W: Return to idle state.
+Learning Highlights
+Understanding Unity's Animator component and state management.
+Using C# scripting to handle player input and trigger animations dynamically.
+Optimizing animation transitions with hashed parameters.
+Setup Instructions
+Attach the script AnimationStateController to a GameObject with an Animator component.
+Create animation states (Idle, Walk, Run) and link them to the Animator parameters IsWalking and IsRunning.
+Set up transitions between states with appropriate conditions in the Animator window.
+Play the game and use the controls to observe smooth animation transitions.
+Technologies Used
+Unity
+C#
